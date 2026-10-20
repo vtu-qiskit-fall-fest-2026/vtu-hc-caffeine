@@ -307,6 +307,6 @@ Released under the [MIT License](LICENSE). See `LICENSE` for details.
 **Caffeine** · Team ID `VTU-QFF-HC-0020` · Tier `Both`
 · Built with ⚛️ Qiskit for the VTU-QFF Hackathon
 
-[⬆ Back to Top](#Caffeine)
+[⬆ Back to Top](#caffeine)
 
 </div>
