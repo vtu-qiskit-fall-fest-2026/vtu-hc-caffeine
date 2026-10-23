@@ -31,10 +31,17 @@ htmlcov/
 # Secrets and environment -- NEVER commit these
 .env
 .env.*
+!.env.example
 *.pem
 *.key
 secrets.yaml
+secrets.toml
+/.streamlit/secrets.toml
 credentials.json
+*_credentials.json
+*service-account*.json
+*.secret
+*.secrets
 
 # Generated data and large artifacts
 *.h5
@@ -55,3 +62,17 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+# Streamlit credentials, local environments, caches, and generated run outputs
+/.streamlit/secrets.toml
+/.venv/
+/venv/
+/env/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+/output/
+/tmp/
+/q_netops_results.csv
