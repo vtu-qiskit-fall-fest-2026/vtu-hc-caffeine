@@ -270,9 +270,9 @@ def generate_mission_pdf(analysis):
     objects.append(b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>")
     pdf = bytearray(b"%PDF-1.4\n%\xe2\xe3\xcf\xd3\n")
     offsets = [0]
-    for obj in objects[1:]:
+    for object_number, obj in enumerate(objects[1:], start=1):
         offsets.append(len(pdf))
-        pdf.extend(f"{len(offsets)} 0 obj\n".encode() + obj + b"\nendobj\n")
+        pdf.extend(f"{object_number} 0 obj\n".encode() + obj + b"\nendobj\n")
     xref = len(pdf)
     pdf.extend(f"xref\n0 {len(offsets)}\n0000000000 65535 f \n".encode())
     for offset in offsets[1:]:
